@@ -21,10 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 if (response.ok) {
+                    console.log("Response is Okay");
                     const result = await response.text(); // Parse response as plain text
                     resultDiv.textContent = `Result: ${result}`;
+                    console.log(result);
+
+
                 } else {
                     resultDiv.textContent = "Error calculating the result.";
+                    console.log(resultDiv.textContent);
                 }
             } catch (error) {
                 console.error("An error occurred:", error);
