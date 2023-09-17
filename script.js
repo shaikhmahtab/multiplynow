@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 if (response.ok) {
-                    const data = await response.json();
-                    resultDiv.textContent = `Result: ${data}`;
+                    const result = await response.text(); // Parse response as plain text
+                    resultDiv.textContent = `Result: ${result}`;
                 } else {
                     resultDiv.textContent = "Error calculating the result.";
                 }
